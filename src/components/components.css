@@ -2359,6 +2359,13 @@
   gap: 0.35rem;
   margin-left: 0.4em;
   font-size: 1rem;
+}
+
+.hero__status--above {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  margin-bottom: 0.75rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
   text-transform: none;
