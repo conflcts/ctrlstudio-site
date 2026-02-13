@@ -93,7 +93,8 @@ export function Navbar({ onGetInTouch: _onGetInTouch }: NavbarProps) {
                 className="navbar__mobile-email"
                 onClick={closeMenu}
               >
-                hello@ctrlstudio.xyz <span className="navbar__mobile-email-plus">+</span>
+                hello@ctrlstudio.xyz
+                <span className="navbar__mobile-email-plus" aria-hidden>+</span>
               </a>
               <span className="navbar__mobile-location">Toronto (CA) {time}</span>
             </div>

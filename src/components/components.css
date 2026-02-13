@@ -1242,7 +1242,7 @@
 .navbar__mobile-talk {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .navbar__mobile-talk-label {
@@ -1253,12 +1253,15 @@
 }
 
 .navbar__mobile-email {
+  display: block;
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 4px;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.01em;
+  line-height: 1.4;
+  word-break: break-all;
   transition: opacity 0.2s;
 }
 
@@ -1267,14 +1270,16 @@
 }
 
 .navbar__mobile-email-plus {
+  display: inline-block;
   font-weight: 400;
-  margin-left: 0.15em;
+  margin-left: 0.25em;
 }
 
 .navbar__mobile-location {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 .navbar__mobile-pill {
@@ -2619,6 +2624,17 @@
   }
 }
 
+/* Phones: hide brand overlay and decorative + to prevent overlap/clutter */
+@media (max-width: 500px) {
+  .navbar__mobile-brand {
+    display: none;
+  }
+
+  .navbar__mobile-email-plus {
+    display: none;
+  }
+}
+
 /* Very small screens (e.g. iPhone SE) */
 @media (max-width: 380px) {
   .hero--mugen .hero__title,
@@ -2628,5 +2644,21 @@
 
   .navbar__mobile-panel {
     width: 100%;
+  }
+
+  .navbar__mobile-talk {
+    gap: 1.25rem;
+  }
+
+  .navbar__mobile-email {
+    font-size: 1rem;
+  }
+
+  .navbar__mobile-divider {
+    margin: 1.5rem 0;
+  }
+
+  .navbar__mobile-panel {
+    padding: 1.5rem 1.5rem 2rem;
   }
 }
