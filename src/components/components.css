@@ -1515,6 +1515,12 @@
   text-transform: uppercase;
 }
 
+.hero__title-sep {
+  margin: 0 0.25em;
+  opacity: 0.6;
+  font-weight: 300;
+}
+
 .hero__title-line {
   display: block;
 }

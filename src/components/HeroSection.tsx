@@ -11,7 +11,7 @@ export function HeroSection({ onGetInTouch: _onGetInTouch }: HeroSectionProps) {
           <span className="hero__status-text">available for work</span>
         </span>
         <h1 id="hero-title" className="hero__title hero__title--mugen">
-          CtrlStudio
+          Ctrl <span className="hero__title-sep" aria-hidden>|</span> Studio
         </h1>
         <span className="hero__since">© Since — 2020</span>
       </div>
