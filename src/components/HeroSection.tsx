@@ -16,6 +16,7 @@ export function HeroSection({ onGetInTouch: _onGetInTouch }: HeroSectionProps) {
           </span>
           <span className="hero__title-line hero__title-line--offset hero__title-line--secondary">Studio</span>
         </h1>
+        <span className="hero__since">© Since — 2020</span>
       </div>
     </section>
   )

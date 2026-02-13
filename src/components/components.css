@@ -1400,28 +1400,41 @@
 
 .hero--mugen .hero__title-block {
   position: absolute;
-  top: 68%;
-  left: 4.5rem;
-  transform: translateY(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  max-width: calc(100% - 5rem);
+  max-width: calc(100% - 4rem);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   pointer-events: none;
 }
 
 .hero--mugen .hero__title {
   position: relative;
   width: 100%;
-  text-align: left;
+  text-align: center;
   margin: 0;
   font-size: clamp(2.5rem, 5.5vw, 6rem) !important;
 }
 
 .hero--mugen .hero__title-line--offset {
-  margin-left: 1.4em;
+  margin-left: 0.15em;
+  display: inline;
+}
+
+.hero--mugen .hero__title-line {
+  display: inline;
+}
+
+.hero--mugen .hero__title-block .hero__since {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.02em;
 }
 
 .hero__layout {
@@ -2421,9 +2434,10 @@
   }
 
   .hero--mugen .hero__title-block {
-    left: 1.25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: calc(100% - 2.5rem);
-    top: 60%;
+    top: 50%;
   }
 
   .hero--mugen .hero__title,
