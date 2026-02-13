@@ -5,7 +5,6 @@ export function WhyUsSection() {
       <div className="why-us__grid">
         {/* Left: chart card */}
         <article className="stat-card stat-card--chart">
-          <span className="stat-card__expand" aria-hidden>↗</span>
           <div className="stat-card__content">
             <div className="stat-card__chart stat-card__chart--years" aria-hidden>
               <span data-year="2020" />
