@@ -65,5 +65,6 @@
   :root {
     --text-h1-size: clamp(2.5rem, 8vw, 64px);
     --text-h2-size: clamp(2rem, 5vw, 46.58px);
+    --section-padding: 4rem 1.25rem;
   }
 }
