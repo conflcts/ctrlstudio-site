@@ -120,6 +120,9 @@ export function ServicesSection() {
                       src={service.image}
                       alt={service.imageAlt ?? ''}
                       className="services-card__thumb"
+                      width={200}
+                      height={200}
+                      loading="lazy"
                     />
                   </div>
                 ) : null}
@@ -147,6 +150,9 @@ export function ServicesSection() {
                       src={service.image}
                       alt={service.imageAlt ?? ''}
                       className="services-card__thumb"
+                      width={200}
+                      height={200}
+                      loading="lazy"
                     />
                   </div>
                 ) : null}

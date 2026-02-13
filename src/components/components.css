@@ -5,14 +5,14 @@
 
 /* Main content */
 .main-content {
-  padding-top: 6rem;
+  padding-top: clamp(4rem, 8vw, 6rem);
   min-height: 100vh;
 }
 
-/* Sections */
+/* Sections - responsive container */
 .section {
   padding: var(--section-padding);
-  max-width: 1200px;
+  max-width: min(1440px, 100%);
   margin: 0 auto;
 }
 
@@ -2161,7 +2161,7 @@
   width: 100%;
   padding: 0.5rem 0;
   font-family: inherit;
-  font-size: 0.9375rem;
+  font-size: 1rem; /* Min 16px prevents iOS zoom on focus */
   font-weight: 500;
   color: #fff;
   background: transparent;

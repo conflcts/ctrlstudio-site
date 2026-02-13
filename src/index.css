@@ -22,16 +22,36 @@
     background: #000;
     cursor: url('/cursor.svg') 3 3, auto;
     font-family: "Neue Haas Grotesk Display Pro", Helvetica, Arial, sans-serif;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow-x: hidden;
     /* Scrollbar – light so it’s noticeable */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.08);
     scrollbar-width: thin;
   }
 
-  /* WebKit (Chrome, Safari, Edge) – light scrollbar */
+  button, a, [role="button"], input, select, textarea, label[for] {
+    touch-action: manipulation;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -58,15 +78,17 @@
   }
 }
 
-/* Mobile: prevent horizontal scroll, improve touch */
-@media (max-width: 768px) {
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 767px) {
   html, body {
     overflow-x: hidden;
     overscroll-behavior-x: none;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }

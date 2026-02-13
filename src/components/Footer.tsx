@@ -10,7 +10,7 @@ export function Footer({ onGetInTouch }: FooterProps) {
       <div className="footer__top">
         <div className="footer__brand">
           <a href="/" className="footer__logo-link" aria-label="Ctrl Home">
-            <img src="/globe-logo.png" alt="Ctrl" className="footer__logo-img" />
+            <img src="/globe-logo.png" alt="Ctrl" className="footer__logo-img" width={170} height={72} loading="lazy" />
           </a>
         </div>
         <div className="footer__location">

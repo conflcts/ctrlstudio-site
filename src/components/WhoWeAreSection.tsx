@@ -7,7 +7,7 @@ export function WhoWeAreSection() {
           <span className="who-we-are__heading-brand">Ctrl</span> is a full service two person design team based in{' '}
           <span className="who-we-are__heading-place">New York, and Vancouver, Canada.</span> We&apos;re a two person team doing what we love: creating great design for businesses that need to move fast.
         </h2>
-        <img src="/globe-logo.png" alt="Ctrl" className="who-we-are__logo" />
+        <img src="/globe-logo.png" alt="Ctrl" className="who-we-are__logo" width={360} height={120} loading="lazy" />
       </div>
       <div className="who-we-are__columns">
         <p className="who-we-are__para">

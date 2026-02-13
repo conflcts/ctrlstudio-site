@@ -30,7 +30,7 @@ export function Navbar({ onGetInTouch: _onGetInTouch }: NavbarProps) {
     <>
       <nav className="navbar navbar--mugen">
         <a href="/" className="navbar__logo navbar__logo--large" aria-label="Ctrl Home">
-          <img src="/globe-logo.png" alt="Ctrl" className="navbar__logo-img" />
+          <img src="/globe-logo.png" alt="Ctrl" className="navbar__logo-img" width={170} height={48} />
           <span className="navbar__since">© Since — 2020</span>
         </a>
         <div className="navbar__center">
@@ -62,7 +62,7 @@ export function Navbar({ onGetInTouch: _onGetInTouch }: NavbarProps) {
           <div className="navbar__mobile-backdrop" onClick={closeMenu} aria-hidden />
           <div className="navbar__mobile-brand">
             <a href="/" className="navbar__mobile-brand-link" onClick={closeMenu}>
-              <img src="/globe-logo.png" alt="Ctrl" className="navbar__mobile-brand-logo" />
+              <img src="/globe-logo.png" alt="Ctrl" className="navbar__mobile-brand-logo" width={170} height={64} />
               <span className="navbar__mobile-tagline">A design studio, built different.</span>
             </a>
           </div>

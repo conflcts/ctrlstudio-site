@@ -47,7 +47,7 @@ export function WhyUsSection() {
         <article className="stat-card stat-card--hero stat-card--image">
           <div className="stat-card__hero-bg stat-card__hero-bg--client-icon" />
           <span className="stat-card__badge">
-              <img src="/globe-logo.png" alt="Ctrl" className="stat-card__badge-logo" />
+              <img src="/globe-logo.png" alt="Ctrl" className="stat-card__badge-logo" width={48} height={48} loading="lazy" />
             </span>
           <div className="stat-card__rating">
             <span className="stat-card__rating-stars">★★★★☆</span>
