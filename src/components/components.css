@@ -1417,7 +1417,7 @@
   width: 100%;
   text-align: left;
   margin: 0;
-  font-size: min(50vw, 20rem) !important;
+  font-size: clamp(2.5rem, 5.5vw, 6rem) !important;
 }
 
 .hero--mugen .hero__title-line--offset {
@@ -1480,9 +1480,9 @@
 }
 
 .hero__title--mugen {
-  font-size: min(50vw, 20rem);
+  font-size: clamp(2.5rem, 5.5vw, 6rem);
   font-weight: 800;
-  line-height: 170px;
+  line-height: 1.1;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -1491,7 +1491,7 @@
 }
 
 .hero__title--mugen .hero__title-line--primary {
-  line-height: 170px;
+  line-height: 1.1;
   color: #fff;
   text-transform: uppercase;
   transform: none;
