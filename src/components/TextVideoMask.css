@@ -1,0 +1,89 @@
+/* TextVideoMask - video or gradient fill within text */
+.text-video-mask {
+  display: inline;
+}
+
+.text-video-mask__text {
+  position: relative;
+  display: inline-block;
+  font: inherit;
+  background: linear-gradient(
+    90deg,
+    #0B0B0B 0%,
+    #4a4a4a 20%,
+    #0B0B0B 40%,
+    #5a5a5a 60%,
+    #0B0B0B 80%,
+    #4a4a4a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-mask-shimmer 5s ease-in-out infinite;
+}
+
+/* Video masked by text - matches hero-word exactly */
+.text-video-mask--video {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-family: inherit;
+  line-height: 1.1;
+  text-transform: uppercase;
+  vertical-align: baseline;
+}
+
+.text-video-mask__measure {
+  visibility: hidden;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: inherit;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.text-video-mask__video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-type: alpha;
+  mask-type: alpha;
+}
+
+.text-video-mask__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 200%;
+  min-height: 200%;
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+}
+
+@keyframes text-mask-shimmer {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}

@@ -1,0 +1,130 @@
+/* Halftone dot background - gradient dot sizes, subtle animation, dark theme */
+
+.halftone-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+.halftone-bg--visible {
+  opacity: 1;
+}
+
+.halftone-bg__layer {
+  position: absolute;
+  inset: -10%;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Small dots – visible more toward top-left, gradient fade to center */
+.halftone-bg__layer--sm {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.32) 0.5px,
+    transparent 0.5px
+  );
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 120% 100% at 20% 30%,
+    black 0%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 120% 100% at 20% 30%,
+    black 0%,
+    transparent 75%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  animation: halftone-pulse 18s ease-in-out infinite;
+}
+
+/* Medium dots – visible in center band */
+.halftone-bg__layer--md {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.24) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 80% at 50% 50%,
+    black 10%,
+    transparent 78%
+  );
+  mask-image: radial-gradient(
+    ellipse 90% 80% at 50% 50%,
+    black 10%,
+    transparent 78%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  animation: halftone-pulse 22s ease-in-out infinite 1s;
+}
+
+/* Large dots – visible more toward bottom-right */
+.halftone-bg__layer--lg {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2) 1.8px,
+    transparent 1.8px
+  );
+  background-size: 36px 36px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 110% 120% at 80% 75%,
+    black 0%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    ellipse 110% 120% at 80% 75%,
+    black 0%,
+    transparent 72%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  animation: halftone-pulse 25s ease-in-out infinite 0.5s;
+}
+
+/* Soft blurred layer for depth */
+.halftone-bg__layer--blur {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.14) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    black 0%,
+    transparent 80%
+  );
+  mask-image: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    black 0%,
+    transparent 80%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  filter: blur(0.6px);
+  -webkit-filter: blur(0.6px);
+  opacity: 1;
+}
+
+@keyframes halftone-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.88; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .halftone-bg__layer--sm,
+  .halftone-bg__layer--md,
+  .halftone-bg__layer--lg {
+    animation: none;
+  }
+}

@@ -1,0 +1,69 @@
+/**
+ * Figma Design Tokens - CTRL
+ * Generated from Figma file: xvScDB6RRsVjZTVZgGaNlq
+ */
+
+:root {
+  /* Inverted dark theme */
+  --color-bg: #000000;
+  --color-bg-secondary: #141414;
+  --color-bg-tertiary: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-accent: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-black: #000000;
+
+  /* Typography - Neue Haas Grotesk Display Pro */
+  --font-family: "Neue Haas Grotesk Display Pro", Helvetica, Arial, sans-serif;
+
+  /* H1 - 64px bold */
+  --text-h1-size: 64px;
+  --text-h1-weight: 700;
+  --text-h1-height: 64px;
+  --text-h1-spacing: -1.28px;
+
+  /* H2 / Section Title - ~47px */
+  --text-h2-size: 46.58px;
+  --text-h2-weight: 500;
+  --text-h2-height: 55.9px;
+  --text-h2-spacing: -0.93px;
+
+  /* H3 - 24px */
+  --text-h3-size: 24px;
+  --text-h3-weight: 500;
+  --text-h3-height: 28.8px;
+  --text-h3-spacing: -0.48px;
+
+  /* Body / Subtitle - 20px */
+  --text-body-size: 20px;
+  --text-body-weight: 500;
+  --text-body-height: 24px;
+  --text-body-spacing: -0.4px;
+
+  /* Small / Nav - 16px */
+  --text-small-size: 16px;
+  --text-small-weight: 500;
+  --text-small-height: 19.2px;
+  --text-small-spacing: -0.32px;
+
+  /* Label - 16.7px semibold */
+  --text-label-size: 16.72px;
+  --text-label-weight: 600;
+  --text-label-height: 15.7px;
+  --text-label-spacing: -0.33px;
+
+  /* Spacing (from Figma layout) */
+  --section-padding: 6rem 2rem;
+  --nav-height: 96px;
+  --grid-gap: 0.5rem;
+  --card-padding: 1.5rem 1.75rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-h1-size: clamp(2.5rem, 8vw, 64px);
+    --text-h2-size: clamp(2rem, 5vw, 46.58px);
+  }
+}
